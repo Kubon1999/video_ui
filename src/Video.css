@@ -1,0 +1,56 @@
+/* css for horizontal/vertical page */
+.video-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(5, auto);
+  color: rgb(0, 0, 0);
+  padding: 5%;
+}
+
+.video {
+  grid-column: span 2;
+  background-color: rgb(58, 58, 58);
+}
+
+h1,
+h2,
+p {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+}
+
+/* recommended section on the right of the page */
+
+.recommended-section {
+  grid-column: span 1;
+  background-color: rgb(58, 58, 58);
+}
+
+.recommended-video img {
+  width: 100%;
+  height: 200px;
+}
+
+/* recommended video should be small make position relative for the text title overlap */
+.recommended-video {
+  height: 200px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+
+/* text overlapping the recommended video */
+.recommended-video p {
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  bottom: 1%;
+}
+
+/* comment section should take 1 of 3 columns */
+.comment-section {
+  grid-column: span 1;
+  background-color: rgb(58, 58, 58);
+}

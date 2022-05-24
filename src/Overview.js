@@ -17,7 +17,7 @@ const OverView = () => {
         <TopNavbar title="Featured videos" />
         <div className="featured-videos-grid">
           <ul>
-            <li class="w2">
+            <li className="w2">
               <Link to="/horizontal-video">
                 <figure>
                   <img src="img/horizontal-img.png" alt="Barbell Bench Press" />
@@ -27,7 +27,7 @@ const OverView = () => {
                 </figure>
               </Link>
             </li>
-            <li class="w1">
+            <li className="w1">
               <Link to="/vertical-video">
                 <figure>
                   <img src="img/vertical-img.png" alt="DB Bench Flys" />
@@ -37,7 +37,7 @@ const OverView = () => {
                 </figure>
               </Link>
             </li>
-            <li class="w1">
+            <li className="w1">
               <Link to="/vertical-video">
                 <figure>
                   <img src="img/vertical-img.png" alt="DB Bench Flys" />
@@ -47,7 +47,7 @@ const OverView = () => {
                 </figure>
               </Link>
             </li>
-            <li class="w2">
+            <li className="w2">
               <Link to="/horizontal-video">
                 <figure>
                   <img src="img/horizontal-img.png" alt="Barbell Bench Press" />
@@ -57,7 +57,7 @@ const OverView = () => {
                 </figure>
               </Link>
             </li>
-            <li class="w1 h2">
+            <li className="w1 h2">
               <Link to="/vertical-video">
                 <figure>
                   <img src="img/vertical-img.png" alt="DB Bench Flys" />
@@ -67,7 +67,7 @@ const OverView = () => {
                 </figure>
               </Link>
             </li>
-            <li class="w1">
+            <li className="w1">
               <Link to="/vertical-video">
                 <figure>
                   <img src="img/vertical-img.png" alt="DB Bench Flys" />
@@ -77,7 +77,7 @@ const OverView = () => {
                 </figure>
               </Link>
             </li>
-            <li class="w1">
+            <li className="w1">
               <Link to="/vertical-video">
                 <figure>
                   <img src="img/vertical-img.png" alt="DB Bench Flys" />
@@ -87,7 +87,7 @@ const OverView = () => {
                 </figure>
               </Link>
             </li>
-            <li class="w2">
+            <li className="w2">
               <Link to="/horizontal-video">
                 <figure>
                   <img src="img/horizontal-img.png" alt="Barbell Bench Press" />
@@ -98,7 +98,7 @@ const OverView = () => {
               </Link>
             </li>
 
-            <li class="w3">
+            <li className="w3">
               <Link to="/horizontal-video">
                 <figure>
                   <img src="img/horizontal-img.png" alt="Barbell Bench Press" />
