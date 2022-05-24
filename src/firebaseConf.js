@@ -1,12 +1,15 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
 import "firebase/auth";
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+//https://firebase.google.com/docs/auth/web/start
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+const firebaseConfigData = {
   apiKey: "AIzaSyAKiu5FPyqdGy_P2HiP-8QBymX4kdrTqn4",
   authDomain: "video-ui-363b9.firebaseapp.com",
   projectId: "video-ui-363b9",
@@ -17,6 +20,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-export default app;
+const app = initializeApp(firebaseConfigData);
+const auth = getAuth(app);
+export default auth;

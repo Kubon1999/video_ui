@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { Route } from "react-router";
-import AuthContext from "./AuthContext";
+import AuthContextProvider from "./AuthContextProvider";
 
 const RouteHandle = () => {
-  const { currentUser } = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContextProvider);
   return <h1> ergergeg</h1>;
 };
 
