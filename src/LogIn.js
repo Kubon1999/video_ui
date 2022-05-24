@@ -3,6 +3,7 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import AuthenticationContext from "./AuthenticationContext";
 import AuthenticationDispatchContext from "./AuthenticationDispatchContext";
 import { Link, Navigate } from "react-router-dom";
+import "./Auth.css";
 
 const LogIn = () => {
   const [email, setEmail] = useState("");
@@ -29,37 +30,34 @@ const LogIn = () => {
     return <Navigate to="/"></Navigate>;
   } else {
     return (
-      <div className="log-in-form">
+      <div>
         <form
           onSubmit={(e) => {
             e.preventDefault();
             handleLogIn();
           }}
+          className="container"
         >
-          <label htmlFor="email">
-            Email
-            <input
-              id="email"
-              value={email}
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </label>
-          <label htmlFor="pass">
-            Password
-            <input
-              id="pass"
-              value={pass}
-              placeholder="Password"
-              type="password"
-              onChange={(e) => setPass(e.target.value)}
-            />
-          </label>
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            value={email}
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <label htmlFor="pass">Password</label>
+          <input
+            id="pass"
+            value={pass}
+            placeholder="Password"
+            type="password"
+            onChange={(e) => setPass(e.target.value)}
+          />
           <button>Log in</button>
+          <Link to="/signup">
+            <p>no account? sign up here!</p>
+          </Link>
         </form>
-        <Link to="/signup">
-          <p>no account? sign up here!</p>
-        </Link>
       </div>
     );
   }

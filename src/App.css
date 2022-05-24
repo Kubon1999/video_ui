@@ -1,0 +1,22 @@
+:root {
+  --front-size: 1.3rem;
+}
+
+html {
+  box-sizing: border-box; /*lets include the border and padding as well to determine the width*/
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* always border-box - easier to calculate */
+}
+
+body {
+  /*some browsers have padding some margins */
+  margin: 0;
+  padding: 0;
+  font-family: "Sora", sans-serif;
+}

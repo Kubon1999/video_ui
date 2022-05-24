@@ -34,47 +34,42 @@ const SignUp = () => {
     return <Navigate replace to="/" />;
   } else {
     return (
-      <div className="sign-up-form">
+      <div>
         <form
           onSubmit={(e) => {
             e.preventDefault();
             handleSignUp();
           }}
+          className="container"
         >
-          <label htmlFor="email">
-            Email
-            <input
-              id="email"
-              value={email}
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </label>
-          <label htmlFor="pass">
-            Password
-            <input
-              id="pass"
-              value={pass}
-              placeholder="Password"
-              type="password"
-              onChange={(e) => setPass(e.target.value)}
-            />
-          </label>
-          <label htmlFor="confPass">
-            Confirm Password
-            <input
-              id="confPass"
-              value={confPass}
-              placeholder="Confirm password"
-              type="password"
-              onChange={(e) => setConfPass(e.target.value)}
-            />
-          </label>
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            value={email}
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <label htmlFor="pass">Password</label>
+          <input
+            id="pass"
+            value={pass}
+            placeholder="Password"
+            type="password"
+            onChange={(e) => setPass(e.target.value)}
+          />
+          <label htmlFor="confPass">Confirm Password</label>
+          <input
+            id="confPass"
+            value={confPass}
+            placeholder="Confirm password"
+            type="password"
+            onChange={(e) => setConfPass(e.target.value)}
+          />
           <button>Submit</button>
+          <Link to="/login">
+            <p>already have an account? log in here!</p>
+          </Link>
         </form>
-        <Link to="/login">
-          <p>already have an account? log in here!</p>
-        </Link>
       </div>
     );
   }
