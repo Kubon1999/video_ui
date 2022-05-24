@@ -7,6 +7,8 @@ import { useState, useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import AuthenticationContext from "./AuthenticationContext";
 import AuthenticationDispatchContext from "./AuthenticationDispatchContext";
+import HorizontalVideo from "./HorizontalVideo";
+import VerticalVideo from "./VerticalVideo";
 
 function App() {
   const [userCredential, setUserCredential] = useState({
@@ -45,6 +47,8 @@ function App() {
               <Route path="/" element={<OverView />} />
               <Route path="/login" element={<LogIn />} />
               <Route path="/signup" element={<SignUp />} />
+              <Route path="/horizontal-video" element={<HorizontalVideo />} />
+              <Route path="/vertical-video" element={<VerticalVideo />} />
             </Routes>
           </Router>
         </AuthenticationDispatchContext.Provider>
