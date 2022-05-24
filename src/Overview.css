@@ -1,0 +1,101 @@
+/* flexbox for menu on top */
+.nav-container {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: flex-start;
+  /* add padding for email and logout in the top right corner */
+  padding: 1%;
+  gap: 1%;
+}
+
+.el-100 {
+  /* featured video should take the whole widht of the page */
+  flex-basis: 100%;
+  /* and text in the center */
+  text-align: center;
+}
+
+/* grid for content */
+
+/* figure contains another grid that is caption and img that are overlapping eachother */
+figure {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(186, 23, 23);
+}
+
+figcaption h2 {
+  font-size: 2rem;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+/* padding for whole videos content */
+.featured-videos-grid {
+  padding: 5%;
+}
+
+figcaption {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.featured-videos-grid ul {
+  /* remove awful ul style */
+  list-style-type: none;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+}
+
+figure img {
+  height: 100%;
+  width: 100%;
+}
+
+/* grid display for desktop only - on mobile just stack items */
+@media (min-width: 800px) {
+  /* image 3/4 figcaption 1/4 */
+  figure {
+    grid-template-rows: repeat(3, auto);
+  }
+
+  figure img {
+    grid-column: 1/2;
+    grid-row: 1/4;
+  }
+
+  figure figcaption {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  /* page layout */
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(5, auto);
+    gap: 1px;
+  }
+
+  .w1 {
+    grid-column: span 1;
+  }
+
+  .w2 {
+    grid-column: span 2;
+  }
+
+  .w3 {
+    grid-column: span 3;
+  }
+
+  .h2 {
+    grid-row: span 2;
+  }
+}

@@ -2,7 +2,8 @@ import { getAuth, signOut } from "firebase/auth";
 import { useContext } from "react";
 import AuthenticationContext from "./AuthenticationContext";
 import AuthenticationDispatchContext from "./AuthenticationDispatchContext";
-import { Navigate } from "react-router";
+import { Navigate, Link } from "react-router-dom";
+import "./Overview.css";
 
 const OverView = () => {
   const userCredential = useContext(AuthenticationContext);
@@ -29,11 +30,91 @@ const OverView = () => {
     return <Navigate to="/login"></Navigate>;
   } else {
     return (
-      <div>
-        <h1> overview page </h1>
-        <h1> hi! {userCredential.email}</h1>
-        <button onClick={handleSignOut}>sign out</button>
-      </div>
+      <>
+        <div className="nav-container">
+          <p>
+            <b> hi!</b> {userCredential.email}
+          </p>
+          <button onClick={handleSignOut}>sign out</button>
+          <h1 className="el-100"> Featured videos </h1>
+        </div>
+        <div className="featured-videos-grid">
+          <ul>
+            <li class="w2">
+              <figure>
+                <img src="img/horizontal-img.png" alt="Barbell Bench Press" />
+                <figcaption>
+                  <h2>Barbell Bench Press</h2>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="w1">
+              <figure>
+                <img src="img/vertical-img.png" alt="DB Bench Flys" />
+                <figcaption>
+                  <h2>Barbell Bench Press</h2>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="w1">
+              <figure>
+                <img src="img/vertical-img.png" alt="DB Bench Flys" />
+                <figcaption>
+                  <h2>DB Bench Flys</h2>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="w2">
+              <figure>
+                <img src="img/horizontal-img.png" alt="Barbell Bench Press" />
+                <figcaption>
+                  <h2>Barbell Bench Press</h2>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="w1 h2">
+              <figure>
+                <img src="img/vertical-img.png" alt="DB Bench Flys" />
+                <figcaption>
+                  <h2>DB Bench Flys</h2>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="w1">
+              <figure>
+                <img src="img/vertical-img.png" alt="DB Bench Flys" />
+                <figcaption>
+                  <h2>DB Bench Flys</h2>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="w1">
+              <figure>
+                <img src="img/vertical-img.png" alt="DB Bench Flys" />
+                <figcaption>
+                  <h2>DB Bench Flys</h2>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="w2">
+              <figure>
+                <img src="img/horizontal-img.png" alt="Barbell Bench Press" />
+                <figcaption>
+                  <h2>Barbell Bench Press</h2>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="w3">
+              <figure>
+                <img src="img/horizontal-img.png" alt="Barbell Bench Press" />
+                <figcaption>
+                  <h2>Barbell Bench Press</h2>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </>
     );
   }
 };
