@@ -9,29 +9,31 @@ const CommentSection = () => {
 
   return (
     <>
-      <h1>COMMENTS:</h1>
-      <label htmlFor="your-comment">Your comment:</label>
-      <input
-        id="your-comment"
-        value={comment}
-        placeholder="Your text here"
-        onChange={(e) => setComment(e.target.value)}
-      />
+      <div className="auth-section">
+        <h1>COMMENTS:</h1>
+        <label htmlFor="your-comment">Your comment:</label>
+        <input
+          id="your-comment"
+          value={comment}
+          placeholder="Your text here"
+          onChange={(e) => setComment(e.target.value)}
+        />
 
-      <button
-        className="comment-button"
-        onClick={() => {
-          if (comment !== "")
-            setComments(
-              comments.concat(userCredential.email + ":\n " + comment)
-            );
-        }}
-      >
-        ADD
-      </button>
-      {comments.map((comment, id) => {
-        return <p key={id}> {comment}</p>;
-      })}
+        <button
+          className="comment-button"
+          onClick={() => {
+            if (comment !== "")
+              setComments(
+                comments.concat(userCredential.email + ":\n " + comment)
+              );
+          }}
+        >
+          ADD
+        </button>
+        {comments.map((comment, id) => {
+          return <p key={id}> {comment}</p>;
+        })}
+      </div>
     </>
   );
 };
