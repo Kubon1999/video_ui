@@ -8,6 +8,7 @@ import CommentSection from "./CommentSection";
 
 const HorizontalVideo = () => {
   const userCredential = useContext(AuthenticationContext);
+  const [showCommentSection, setShowCommentSection] = useState(true);
 
   if (!userCredential.accessToken) {
     /* user already signed in redirecting to the homepage...*/
@@ -39,7 +40,28 @@ const HorizontalVideo = () => {
             <RecommendedSection />
           </div>
           <div className="comment-section">
-            <CommentSection />
+            {showCommentSection ? (
+              <>
+                <button
+                  className="comment-button"
+                  onClick={() => {
+                    setShowCommentSection(false);
+                  }}
+                >
+                  Hide comment section
+                </button>
+                <CommentSection />
+              </>
+            ) : (
+              <button
+                className="comment-button"
+                onClick={() => {
+                  setShowCommentSection(true);
+                }}
+              >
+                Show comment section
+              </button>
+            )}
           </div>
         </section>
       </>
