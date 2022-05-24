@@ -4,6 +4,7 @@ import { Link, Navigate } from "react-router-dom";
 import TopNavbar from "./TopNavbar";
 import "./Video.css";
 import RecommendedSection from "./RecommendedSection";
+import CommentSection from "./CommentSection";
 
 const HorizontalVideo = () => {
   const userCredential = useContext(AuthenticationContext);
@@ -38,7 +39,7 @@ const HorizontalVideo = () => {
             <RecommendedSection />
           </div>
           <div className="comment-section">
-            <h1> comment-section </h1>;
+            <CommentSection />
           </div>
         </section>
       </>

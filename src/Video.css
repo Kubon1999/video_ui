@@ -10,7 +10,6 @@
 
 .video {
   grid-column: span 2;
-  background-color: rgb(58, 58, 58);
 }
 
 h1,
@@ -25,7 +24,6 @@ p {
 
 .recommended-section {
   grid-column: span 1;
-  background-color: rgb(58, 58, 58);
 }
 
 .recommended-video img {
@@ -52,5 +50,4 @@ p {
 /* comment section should take 1 of 3 columns */
 .comment-section {
   grid-column: span 1;
-  background-color: rgb(58, 58, 58);
 }
